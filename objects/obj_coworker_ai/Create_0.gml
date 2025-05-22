@@ -24,7 +24,7 @@ willThisBossStop = random_range(0,1);
 percentChanceToStop = 10;
 
 willThisCoworkerTalk = random_range(0,1);
-percentChanceToTalk = 100;
+percentChanceToTalk = 50;
 currentlyTalking = false;
 hasTalked = false;
 howLongToTalk = 2;

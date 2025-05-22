@@ -31,7 +31,7 @@ hasTalked = false;
 howLongToTalk = 2;
 
 
-howLongToChange = 30;
+howLongToChange = 45;
 
 isAlarmOn = false;
 

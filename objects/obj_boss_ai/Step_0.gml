@@ -9,12 +9,42 @@ if(!hasTakenAction){
 	
 		if(place_meeting(x,y, obj_checkZone)){
 			
-			//create the quick time event mini game.
+			if(willThisBossStop <= (percentChanceToStop)/100){
+				obj_playerController.isBusy = true;
+				isCheckingPlayer = true;
+				hasCheckedPlayer = true;
+				image_index = indexToStopAs;
+				isWalking = false;
 			
-			
+				alarm[2] = 60 * howLongToStop;
+				if(!isAlarmOn){
+					alarm[0] = howLongToChange;
+					isAlarmOn = true;
+				}
+				hasTakenAction = true;
+			}
+			else{
+				hasCheckedPlayer = true;
+			}
 		}
 	}
 	//========================================================================================
+	if(place_meeting(x,y,obj_coworker_ai)){
+		checkOverlap = instance_place(x,y, obj_coworker_ai)
+	
+		if(checkOverlap.isFacingRight == isFacingRight || checkOverlap.hasTakenAction){
+			checkOverlap = noone;
+		}
+	}
+	else{
+		checkOverlap = noone;
+	}
+	if(checkOverlap != noone)
+	{
+		scr_Talking(id, checkOverlap, howLongToTalk);
+		hasTakenAction = true;
+		checkOverlap = noone;
+	}
 	
 }
 

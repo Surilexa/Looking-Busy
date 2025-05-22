@@ -6,3 +6,5 @@ global.scoreMultiplier = 1;
 stressLevel = 20;
 
 scoreAmount = .01 * global.scoreMultiplier;
+
+

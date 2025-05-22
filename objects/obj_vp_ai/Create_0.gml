@@ -21,10 +21,10 @@ hasTakenAction = false;
 
 indexToStopAs = irandom_range(2,4);
 willThisBossStop = random_range(0,1);
-percentChanceToStop = 50;
+percentChanceToStop = 60;
 
 willThisCoworkerTalk = random_range(0,1);
-percentChanceToTalk = 100;
+percentChanceToTalk = 40;
 currentlyTalking = false;
 hasTalked = false;
 howLongToTalk = 2;

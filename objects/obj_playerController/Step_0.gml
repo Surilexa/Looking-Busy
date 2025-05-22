@@ -9,6 +9,6 @@ if(keyboard_check_pressed(vk_space)){
 	}
 }
 
-if(!obj_g_shader.use_greyScale){
+if(!obj_g_shader.use_greyScale && !obj_GameController.lose){
 	global.currentScore += obj_scoreController.scoreAmount;
 }
